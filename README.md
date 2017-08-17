@@ -7,7 +7,31 @@ in the building that warrant extreme caution when conducting interior
 firefighting or rescue operations with entry occurring only for known life
 hazards.
 
-In this case, red-x alerts us of abandoned domain delegations.
+In this case, Red-X alerts us of abandoned or misconfigured domain delegations.
+
+## Why?
+
+Preventing misconfigured delegations should be pretty self-explanatory - you
+need your customers to be able to quickly and reliably resolve your domain
+names from anywhere in the world.
+
+Preventing abandoned delegations is also very important. For one, to prevent
+Cloud resource sprawl from draining your coffers and your operations time. But,
+perhaps more importantly, to prevent DNS zone hijacking.
+
+### What's zone hijacking?
+
+Due to the shared infrastructure of Route53 (and other managed AWS services,
+like CloudFront), it's surprisingly easy to take control of a misconfigured
+or abandoned zone, CNAME, or A ALIAS.
+
+The particular attack Red-X attempts to prevent is zone hijacking through
+brute-forcing nameservers. Since Route53 assigns you four nameservers when you
+create a hosted zone, an attacker that happens upon an abandoned zone can hijack
+that zone by brute-force creating a hosted zone for that domain again and again
+until they've matched one or more of the nameservers it was delegated to.
+
+You can find a better explanation [here](https://thehackerblog.com/the-orphaned-internet-taking-over-120k-domains-via-a-dns-vulnerability-in-aws-google-cloud-rackspace-and-digital-ocean/index.html).
 
 ## What it does
 
