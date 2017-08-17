@@ -1,0 +1,5 @@
+boto3 #no-deploy
+botocore #no-deploy
+s3transfer #no-deploy
+dnspython==1.15.0
+python-gitlab==0.21.2
