@@ -1,7 +1,7 @@
 {
   "name": "red-x",
   "version": "1.0.1",
-  "description": "",
+  "description": "A serverless project to monitoring zone delegations in Route53.",
   "main": "index.js",
   "dependencies": {
   },
@@ -12,6 +12,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Norm MacLennan <nmaclennan@cimpress.com>",
+  "license": "Apache-2.0"
 }
