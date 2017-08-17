@@ -1,8 +1,6 @@
 red-x
 =====
 
-![](http://i.dailymail.co.uk/i/pix/2013/09/02/article-2408624-1B8BA853000005DC-231_964x603.jpg)
-
 >The Red X is a warning placard affixed to a vacant building structure
 alerting first responders to the existence of structural or interior hazards
 in the building that warrant extreme caution when conducting interior
