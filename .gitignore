@@ -21,3 +21,4 @@ var/
 .requirements
 node_modules/
 __pycache__/
+.vscode/

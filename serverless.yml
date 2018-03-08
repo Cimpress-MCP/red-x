@@ -58,7 +58,12 @@ provider:
 
 functions:
   check_delegations:
-    handler: handler.check_delegations
+    handler: check_delegations.handler
+    timeout: 60
+    events:
+      - schedule: cron(0 10 * * ? *)
+  check_abandoned_records:
+    handler: check_abandoned_records.handler
     timeout: 60
     events:
       - schedule: cron(0 10 * * ? *)
