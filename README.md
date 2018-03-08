@@ -7,7 +7,9 @@ in the building that warrant extreme caution when conducting interior
 firefighting or rescue operations with entry occurring only for known life
 hazards.
 
-In this case, Red-X alerts us of abandoned or misconfigured domain delegations.
+In this case, Red-X alerts us of abandoned/misconfigured domain delegations
+or records pointing at inactive domains from managed services (cloudfront.net or
+elasticbeanstalk.com)
 
 ## Why?
 
@@ -33,6 +35,12 @@ until they've matched one or more of the nameservers it was delegated to.
 
 You can find a better explanation [here](https://thehackerblog.com/the-orphaned-internet-taking-over-120k-domains-via-a-dns-vulnerability-in-aws-google-cloud-rackspace-and-digital-ocean/index.html).
 
+### What's record hijacking?
+
+Similar to zone hijacking, records pointing to domains from managed services like
+elasticbeanstalk.com or cloudfront.net can be abandoned and later used to hijack
+the domain.
+
 ## What it does
 
 * Fetches configuration from EC2 Parameter Store
@@ -43,7 +51,10 @@ You can find a better explanation [here](https://thehackerblog.com/the-orphaned-
     * Ensures each nameserver returns the expected result for NS records.
     * No response implies the delegation is abandoned.
     * Mismatched results implies misconfiguration or zone hijacking.
-
+* Pulls out all A and CNAME records pointing to beanstalk or cloudfront domains
+    * Warns about CNAMEs, since A ALIAS records are more correct
+    * Alerts if the elasticbeanstalk.com or cloudfront.net address doesn't resolve.
+    
 Then, it can notify you in two ways:
 1. GitLab issues.
     * Open an issue in the configured project for each delegation error.

@@ -5,8 +5,8 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "serverless": "^1.18.1",
-    "serverless-python-requirements": "^3.0.9"
+    "serverless": "^1.26.1",
+    "serverless-python-requirements": "^3.3.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
