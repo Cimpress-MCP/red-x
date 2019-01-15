@@ -33,7 +33,7 @@ create a hosted zone, an attacker that happens upon an abandoned zone can hijack
 that zone by brute-force creating a hosted zone for that domain again and again
 until they've matched one or more of the nameservers it was delegated to.
 
-You can find a better explanation [here](https://thehackerblog.com/the-orphaned-internet-taking-over-120k-domains-via-a-dns-vulnerability-in-aws-google-cloud-rackspace-and-digital-ocean/index.html).
+You can find a better explanation [here](https://thehackerblog.com/the-orphaned-internet-taking-over-120k-domains-via-a-dns-vulnerability-in-aws-google-cloud-rackspace-and-digital-ocean/index-2.html).
 
 ### What's record hijacking?
 
@@ -54,7 +54,7 @@ the domain.
 * Pulls out all A and CNAME records pointing to beanstalk or cloudfront domains
     * Warns about CNAMEs, since A ALIAS records are more correct
     * Alerts if the elasticbeanstalk.com or cloudfront.net address doesn't resolve.
-    
+
 Then, it can notify you in two ways:
 1. GitLab issues.
     * Open an issue in the configured project for each delegation error.
