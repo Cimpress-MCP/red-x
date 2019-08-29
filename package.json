@@ -1,6 +1,6 @@
 {
   "name": "red-x",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A serverless project to monitoring zone delegations in Route53.",
   "main": "index.js",
   "dependencies": {},
