@@ -3,10 +3,9 @@
   "version": "1.0.5",
   "description": "A serverless project to monitoring zone delegations in Route53.",
   "main": "index.js",
-  "dependencies": {},
   "devDependencies": {
-    "serverless": "^1.51.0",
-    "serverless-python-requirements": "^3.3.1"
+    "serverless": "^2.39.1",
+    "serverless-python-requirements": "^5.1.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
