@@ -4,7 +4,7 @@
   "description": "A serverless project to monitoring zone delegations in Route53.",
   "main": "index.js",
   "devDependencies": {
-    "serverless": "^2.43.1",
+    "serverless": "^3.27.0",
     "serverless-python-requirements": "^5.1.1"
   },
   "scripts": {
